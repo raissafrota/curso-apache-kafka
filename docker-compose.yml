@@ -37,7 +37,7 @@ services:
       KAFKA_BROKERCONNECT: kafka:29092
       
   payment:
-    image: payment-service
+    image: raissafrota/payment-service
     networks:
       - broker-kafka
     depends_on:
@@ -48,7 +48,7 @@ services:
       KAFKA_HOST: kafka:29092
 
   consumer:
-    image: json-consumer
+    image: raissafrota/json-consumer
     networks:
       - broker-kafka
     depends_on:
